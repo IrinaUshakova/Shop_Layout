@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: #222222;
+  height: 74px;
+  padding: 18px 16px;
+  box-sizing: border-box;
+}
+
+.counter {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  background: #f16d7f;
+  color: white;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  right: 27px;
+  top: -19px;
+  font-size: 12px;
+  line-height: 19px;
+  display: none;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__cart-counter {
+  position: relative;
+}
+
+.header__logo {
+  margin-right: 41px;
+}
+
+.header__user,
+.header__cart {
+  display: none;
+}
+
+.header__user {
+  margin-left: 25px;
+  margin-right: 42px;
+}
+
+.brand {
+  min-height: 363px;
+  background: #f1e4e6;
+  margin-bottom: 64px;
+}
+
+.brand__img {
+  display: block;
+}
+
+.brand__left {
+  display: none;
+}
+
+.brand__right {
+  min-height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand__text {
+  border-left: 12px solid #f16d7f;
+  height: 61px;
+  padding-left: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.brand__text div:first-child {
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 46px;
+  font-family: 'Lato', sans-serif;
+}
+
+.brand__text div:last-child {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: 'Lato', sans-serif;
+}
+
+.text__pink {
+  color: #f16d7f;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 64px;
+}
+
+.card__for-women,
+.card__for-men,
+.card__for-kids,
+.card__accesories {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__text {
+  position: absolute;
+}
+
+.img__accesories,
+.for-women,
+.for-men,
+.for-kids {
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: -1;
+}
+
+.for-women {
+  height: 247px;
+}
+
+.for-men {
+  height: 249px;
+}
+
+.for-kids {
+  height: 248px;
+}
+
+.img__accesories {
+  height: 111px;
+}
+
+.card__text-top {
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.card__text-bottom {
+  font-family: 'Lato';
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #f16d7f;
+}
+
+@media (min-width: 768px) {
+  .header__logo {
+    margin-left: 32px;
+  }
+  .header__user {
+    display: inline;
+  }
+
+  .header__cart {
+    display: inline;
+    margin-right: 41px;
+  }
+
+  .brand {
+    display: flex;
+  }
+
+  .brand__left {
+    display: inline;
+  }
+
+  .brand__left,
+  .brand__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+
+  .img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 167px, 116px;
+    gap: 19px;
+  }
+
+  .card__accesories {
+    grid-column: 1/-1;
+  }
+
+  .counter {
+    display: inline;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    width: 1140px;
+    margin: 0 auto;
+  }
+  .brand {
+    min-height: 764px;
+  }
+  .brand__text div:first-child {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 57px;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .brand__text div:last-child {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .brand__text {
+    height: 92px;
+  }
+}
