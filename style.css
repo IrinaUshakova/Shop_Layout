@@ -12,7 +12,6 @@
 
 .counter {
   position: absolute;
-  display: inline-block;
   text-align: center;
   background: #f16d7f;
   color: white;
@@ -149,7 +148,7 @@
 }
 
 .card__text-top {
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
@@ -158,18 +157,110 @@
 }
 
 .card__text-bottom {
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
   text-align: center;
   color: #f16d7f;
 }
+.fetured__items {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.fetured__header {
+  margin-bottom: 3px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  color: #222222;
+}
+
+.fetured__text {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #9F9F9F;
+  margin-bottom: 64px;
+}
+
+.fetured__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 16px;
+}
+
+.feturedCard {
+  background: #F8F8F8;
+}
+
+.feturedCard img {
+  width: 100%;
+}
+
+.feturedCard__header {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+  padding: 25px 18px 12px;
+}
+
+.feturedCard__text {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #5D5D5D;
+  padding-bottom: 18px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.feturedCard__price {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #F16D7F;
+  padding-left: 18px;
+  padding-bottom: 20px;
+}
+
+.fetured__btn {
+  border: 1px solid #FF6A6A;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #F26376;
+  padding: 13px 38px;
+  margin-bottom: 96px;
+  margin-top: 41px;
+  background: #FFFFFF;
+}
+
+.fetured__btn:hover {
+  background: #F16D7F;
+  color: #FFFFFF;
+}
+
+.btn__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media (min-width: 768px) {
   .header__logo {
     margin-left: 32px;
   }
+
   .header__user {
     display: inline;
   }
@@ -202,7 +293,6 @@
 
   .cards {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 167px, 116px;
     gap: 19px;
   }
 
@@ -213,31 +303,68 @@
   .counter {
     display: inline;
   }
-}
 
-@media (min-width: 1600px) {
-  .container {
-    width: 1140px;
-    margin: 0 auto;
-  }
-  .brand {
-    min-height: 764px;
-  }
-  .brand__text div:first-child {
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 57px;
-    font-family: 'Lato', sans-serif;
+  .fetured__items {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
-  .brand__text div:last-child {
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 38px;
-    font-family: 'Lato', sans-serif;
+  .fetured__cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 18px;
+    grid-column-gap: 16px;
   }
 
-  .brand__text {
-    height: 92px;
+  .fetured__btn {
+    margin-top: 33px;
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: 1600px) {
+    .container {
+      width: 1140px;
+      margin: 0 auto;
+    }
+
+    .brand {
+      min-height: 764px;
+    }
+
+    .brand__text div:first-child {
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 57px;
+      font-family: 'Lato', sans-serif;
+    }
+
+    .brand__text div:last-child {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 38px;
+      font-family: 'Lato', sans-serif;
+    }
+
+    .brand__text {
+      height: 92px;
+    }
+
+    .cards {
+      grid-template-rows: 260px 180px;
+    }
+
+    .fetured__items {
+      width: 1140px;
+      margin: 0 auto;
+    }
+
+    .fetured__cards {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .fetured__btn {
+      margin-top: 49px;
+      margin-bottom: 95px;
+    }
   }
 }
